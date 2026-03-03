@@ -1,8 +1,31 @@
-🎧 Gesture DJ: Hand-Controlled Audio MixerGesture DJ is a real-time computer vision application that allows you to control music and sound effects using simple hand gestures. Powered by OpenCV and MediaPipe, it transforms your webcam into a touch-free DJ controller.🚀 FeaturesReal-time Hand Tracking: High-speed gesture detection using MediaPipe.Touchless Control: Play, swap, or stop tracks without touching your keyboard.Visual Feedback: On-screen HUD showing current detected gestures and playback status.Debounce/Cooldown System: Prevents accidental double-triggers for a smoother experience.🎮 How to ControlGestureActionSound Triggered☝️ One FingerPlay Discodisco.wav✋ Open PalmPlay Clapclap.wav✌️ Two FingersPlay Amazingamazing.wav✊ FistStop All(Silence)🛠️ PrerequisitesBefore running the script, ensure you have Python 3.x installed along with the following libraries:Bashpip install opencv-python mediapipe pygame
-Note: The script uses pygame.mixer (referenced as current_sound.play()/stop() in your code) to handle audio playback.📂 Project StructureMake sure your directory looks like this so the script can find your tracks:Plaintext.
-├── gesture_dj.py      # The main script
-├── disco.wav          # Audio file for "ONE" gesture
-├── clap.wav           # Audio file for "PALM" gesture
-└── amazing.wav        # Audio file for "TWO" gesture
-💻 UsageConnect your webcam.Run the script:Bashpython gesture_dj.py
-The webcam feed will open. Position your hand in the frame.To Exit: Press the 'q' key on your keyboard.⚙️ ConfigurationInside the script, you can adjust the following variables to tune the performance:cooldown: The time (in seconds) the system waits before accepting a new gesture (prevents sound stuttering).DEBUG: Set to True to see gesture triggers in your terminal console.📝 LicenseThis project is open-source. Feel free to fork it, add new tracks, or experiment with more complex gestures!
+# 🎧 Gesture DJ: Hand-Controlled Audio Mixer
+
+**Gesture DJ** is a real-time computer vision application that allows you to control music and sound effects using simple hand gestures. Powered by **OpenCV** and **MediaPipe**, it transforms your webcam into a touch-free DJ controller.
+
+---
+
+## 🚀 Features
+* **Real-time Hand Tracking:** High-speed gesture detection using MediaPipe.
+* **Touchless Control:** Play, swap, or stop tracks without touching your keyboard.
+* **Visual Feedback:** On-screen HUD showing current detected gestures and playback status.
+* **Debounce/Cooldown System:** Prevents accidental double-triggers.
+
+---
+
+## 🎮 How to Control
+
+| Gesture | Action | Sound Triggered |
+| :--- | :--- | :--- |
+| ☝️ **One Finger** | Play Disco | `disco.wav` |
+| ✋ **Open Palm** | Play Clap | `clap.wav` |
+| ✌️ **Two Fingers** | Play Amazing | `amazing.wav` |
+| ✊ **Fist** | Stop All | (Silence) |
+
+---
+
+## 🛠️ Prerequisites
+
+Before running the script, ensure you have **Python 3.x** installed along with the following libraries:
+
+```bash
+pip install opencv-python mediapipe pygame
