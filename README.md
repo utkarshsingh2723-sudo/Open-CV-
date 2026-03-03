@@ -29,3 +29,12 @@ Before running the script, ensure you have **Python 3.x** installed along with t
 
 ```bash
 pip install opencv-python mediapipe pygame
+
+📂 Project Structure
+Make sure your directory looks like this so the script can find your tracks:
+
+.
+├── gesture_dj.py      # The main script
+├── disco.wav          # Audio file for "ONE" gesture
+├── clap.wav           # Audio file for "PALM" gesture
+└── amazing.wav        # Audio file for "TWO" gesture
